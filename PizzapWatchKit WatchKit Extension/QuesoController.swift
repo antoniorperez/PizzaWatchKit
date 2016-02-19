@@ -1,6 +1,6 @@
 //
-//  InterfaceController.swift
-//  PizzapWatchKit WatchKit Extension
+//  QuesoController.swift
+//  PizzapWatchKit
 //
 //  Created by Antonio Rodríguez on 18/2/16.
 //  Copyright © 2016 Antonio Rodríguez. All rights reserved.
@@ -10,52 +10,51 @@ import WatchKit
 import Foundation
 
 
-class InterfaceController: WKInterfaceController {
+class QuesoController: WKInterfaceController {
     
-    let tamaños = ["Chica", "Mediana", "Grande"]
+    let quesos = ["Mozarella", "Cheddar", "Parmesano", "Sin queso"]
     
-    var pickerVal : String = "Chica"
-
-    @IBOutlet var picker: WKInterfacePicker!
+    var pickerVal : String = "Mozarella"
     
-
-    @IBAction func continuar() {
-        let p = Pizza()
-        p.tamaño = pickerVal
-        pushControllerWithName("MasaController", context: p)
-    }
+    var pizza : Pizza?
+    
     
     @IBAction func pickerChanged(value: Int) {
-        pickerVal = tamaños[value]
-        
+        pickerVal = quesos[value]
     }
-    
+    @IBOutlet var picker: WKInterfacePicker!
+
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        super.awakeWithContext(context)
+        let p = context as! Pizza
+        pizza = p
 
+        
+        // Configure interface objects here.
     }
 
+    @IBAction func continuar() {
+        pizza!.queso = pickerVal
+        pushControllerWithName("Ingredientes", context: pizza)
+    }
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         var pickerItems = [WKPickerItem]()
-        for index  in 0...tamaños.count-1{
+        for index  in 0...quesos.count-1{
             let pickerItem = WKPickerItem()
-            pickerItem.title = tamaños[index]
-            pickerItem.caption = tamaños[index]
+            pickerItem.title = quesos[index]
+            pickerItem.caption = quesos[index]
             pickerItems.append(pickerItem)
-            
         }
-        picker.setItems(pickerItems)
+            picker.setItems(pickerItems)
+
     }
-    
-    
 
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-    
-    
 
 }

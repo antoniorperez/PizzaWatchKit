@@ -21,6 +21,11 @@
 		8E6971FE1C766F7E00994824 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6971FD1C766F7E00994824 /* NotificationController.swift */; };
 		8E6972001C766F7E00994824 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6971FF1C766F7E00994824 /* GlanceController.swift */; };
 		8E6972021C766F7E00994824 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E6972011C766F7E00994824 /* Assets.xcassets */; };
+		8E6972161C76782B00994824 /* masaControllerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6972151C76782B00994824 /* masaControllerInterfaceController.swift */; };
+		8E6972181C767A0700994824 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6972171C767A0700994824 /* Pizza.swift */; };
+		8ECEB4DF1C767F2600F6496E /* QuesoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEB4DE1C767F2600F6496E /* QuesoController.swift */; };
+		8ECEB4E11C767F3600F6496E /* IngredientesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEB4E01C767F3600F6496E /* IngredientesController.swift */; };
+		8ECEB4E31C767F5400F6496E /* ConfirmacionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEB4E21C767F5400F6496E /* ConfirmacionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +90,11 @@
 		8E6971FF1C766F7E00994824 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		8E6972011C766F7E00994824 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E6972031C766F7E00994824 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E6972151C76782B00994824 /* masaControllerInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = masaControllerInterfaceController.swift; sourceTree = "<group>"; };
+		8E6972171C767A0700994824 /* Pizza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
+		8ECEB4DE1C767F2600F6496E /* QuesoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuesoController.swift; sourceTree = "<group>"; };
+		8ECEB4E01C767F3600F6496E /* IngredientesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientesController.swift; sourceTree = "<group>"; };
+		8ECEB4E21C767F5400F6496E /* ConfirmacionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmacionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +118,7 @@
 		8E6971C81C766F7E00994824 = {
 			isa = PBXGroup;
 			children = (
+				8E6972171C767A0700994824 /* Pizza.swift */,
 				8E6971D31C766F7E00994824 /* PizzapWatchKit */,
 				8E6971E71C766F7E00994824 /* PizzapWatchKit WatchKit App */,
 				8E6971F61C766F7E00994824 /* PizzapWatchKit WatchKit Extension */,
@@ -151,7 +162,7 @@
 		8E6971F61C766F7E00994824 /* PizzapWatchKit WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				8E6971F91C766F7E00994824 /* InterfaceController.swift */,
+				8E6972141C76770400994824 /* Controllers */,
 				8E6971FB1C766F7E00994824 /* ExtensionDelegate.swift */,
 				8E6971FD1C766F7E00994824 /* NotificationController.swift */,
 				8E6971FF1C766F7E00994824 /* GlanceController.swift */,
@@ -168,6 +179,18 @@
 				8E6971F81C766F7E00994824 /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8E6972141C76770400994824 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8E6971F91C766F7E00994824 /* InterfaceController.swift */,
+				8E6972151C76782B00994824 /* masaControllerInterfaceController.swift */,
+				8ECEB4DE1C767F2600F6496E /* QuesoController.swift */,
+				8ECEB4E01C767F3600F6496E /* IngredientesController.swift */,
+				8ECEB4E21C767F5400F6496E /* ConfirmacionController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +339,11 @@
 			files = (
 				8E6971FE1C766F7E00994824 /* NotificationController.swift in Sources */,
 				8E6971FC1C766F7E00994824 /* ExtensionDelegate.swift in Sources */,
+				8ECEB4E31C767F5400F6496E /* ConfirmacionController.swift in Sources */,
+				8E6972181C767A0700994824 /* Pizza.swift in Sources */,
+				8E6972161C76782B00994824 /* masaControllerInterfaceController.swift in Sources */,
+				8ECEB4E11C767F3600F6496E /* IngredientesController.swift in Sources */,
+				8ECEB4DF1C767F2600F6496E /* QuesoController.swift in Sources */,
 				8E6971FA1C766F7E00994824 /* InterfaceController.swift in Sources */,
 				8E6972001C766F7E00994824 /* GlanceController.swift in Sources */,
 			);
@@ -548,6 +576,7 @@
 				8E6972081C766F7E00994824 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E69720A1C766F7E00994824 /* Build configuration list for PBXNativeTarget "PizzapWatchKit WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +585,7 @@
 				8E69720C1C766F7E00994824 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E69720E1C766F7E00994824 /* Build configuration list for PBXNativeTarget "PizzapWatchKit" */ = {
 			isa = XCConfigurationList;
@@ -564,6 +594,7 @@
 				8E6972101C766F7E00994824 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
